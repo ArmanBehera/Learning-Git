@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+        <link href="styles.css" rel="stylesheet">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                document.querySelector('form').addEventListener('submit', function(event) {
+
+                    let search = document.getElementById('search').value;
+
+                    if (search) {
+                        document.getElementById('target').innerHTML = 'Searched for ' + search;
+                    }
+                    else {
+                        alert('Invalid. Empty Search');
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
+
+        <title>Contact</title>
+    </head>
+
+    <body>
+        <h2 class="top">Contacts</h2>
+        <hr>
+
+        <p>Feel free to contact me for project collaboration, questions regarding my projects and other inquiries. I prefer emails over DMs, so if possible contact me using the information from below to reach out.</p>
+
+        <div id="details">
+            <p class="contact">Email ID: armanbehera264@gmail.com</p>
+            <p class="contact">Instagram ID: acyclicspark554</p>
+        </div>
+
+        <div>
+            <p>While you are at it, here's a small search engine for ya!</p>
+            <form id="form" target="_blank" action="https://www.google.com/search" method="get">
+                <input autocomplete="off" id="search" type="search" placeholder="Search" name="q">
+                <input id="button" type="submit" value="Search">
+            </form><br>
+            <span id="target" style="margin-top: -4em;"></span>
+        </div>
+    </body>
+</html>
